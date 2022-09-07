@@ -37,5 +37,23 @@ letters.count("a")    # 4
 numbers = [1,2,3,4,5,6]
 numbers.count(&:even?) # 3
 
+#map
+[:foo, 'bar', 2].map {|element| element.class } # => [Symbol, String, Integer]
+[:a, :b, nil, :c].compact #[:a, :b, :c]  - remove nils
+
 #duplicates in an Array:
 [1,2,2,3,4,7,4,4].group_by(&:itself).filter_map { |_,v| v if v.size > 1 } # [[2,2],[4,4,4]]
+
+
+#Associative Arrays:
+#=======================================
+a = [ [ 1, "one"], [2, "two"], [3, "three"], ["ii", "two"] ]
+a.rassoc("two")    #=> [2, "two"]
+a.rassoc("four")   #=> nil
+---
+s1 = [ "colors", "red", "blue", "green" ]
+s2 = [ "letters", "a", "b", "c" ]
+s3 = "foo"
+a  = [ s1, s2, s3 ]
+a.assoc("letters")  #=> [ "letters", "a", "b", "c" ]
+a.assoc("foo")      #=> nil
