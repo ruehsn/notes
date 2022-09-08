@@ -13,11 +13,6 @@ system("commandhere")
 #===============================================================================
 n= ARGV[0] #pull from command line input
 
-# Standard-In
-gets.chomp.chomp
-# Standard-In Delete
-STDIN.noecho(&:gets).chomp
-
 
 #Environment Variables
 #===============================================================================
