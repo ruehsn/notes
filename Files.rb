@@ -7,6 +7,11 @@ require 'fileutils'
 FileUtils.mkpath(dirname)
 
 
+Dir.exist?(@local_dir) #check if Directory exisits
+FileUtils.remove_dir(@local_dir) if Dir.exist?(@local_dir) #
+
+
+
 #looping through a directory:
 #-------------------------------------------
 Dir.foreach(path){|item|

@@ -39,5 +39,10 @@ condition ? if_true : if_false
 @item.rigged? ? 'Yes' : 'No'
 command_type = reset_commands.include?(@command) ? 'R' : 'O'
 
-# setting a default value if varible is null:
+# setting a default value if variable is null:
 x ||= value
+
+# execute this code conditionally when we have a constant called `Rails`
+if defined?(Rails)
+  # ...
+end

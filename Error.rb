@@ -49,6 +49,11 @@ class PepError < StandardError
   end
 end
 
+#arguement Error:
+raise ArgumentError.new(
+  "Expected a value of 1-#{CREATURES.size}, got #{n}"
+) if CREATURES.size < n
+
 #raising that custom error:
 raise PepError.new(pep_rc, error)  
 
@@ -86,5 +91,3 @@ Exception
    ThreadError
   TypeError
   ZeroDivisionError
-  
-  

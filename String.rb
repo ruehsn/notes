@@ -33,7 +33,7 @@ s = StringScanner.new("//SPOOL2   DD  DSN=PEN.R&DB..OPER.R5400.RPT(+1),")
 :flag_a
 "some_String".to_sym #:some_string
 
-#
+# create list using eof to end the list... i think
 #===============================================================================
 __END__
 Doom
