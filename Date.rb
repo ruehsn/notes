@@ -9,6 +9,7 @@ elapsed # => 9.183449000120163 seconds
 # Date format:
 #===============================================================================
 Date.today.strftime()
+Date.today + 30  # 30 days from today
 
 Date (Year, Month, Day):
 %Y - Year with century (can be negative, 4 digits at least) 0000, 1995, 2009, 14292, etc.

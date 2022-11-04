@@ -1,5 +1,5 @@
 #===============================================================================
-#HASH
+#HASH  https://ruby-doc.org/core-3.1.2/Hash.html
 #===============================================================================
 h = Hash.new("Go Fish") #go fish will be the default value if key is added without a value
 h["a"] = 100
