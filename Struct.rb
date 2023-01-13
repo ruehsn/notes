@@ -1,0 +1,1 @@
+ReportData = Struct.new(:matched_records, :unmatched_out_files, :unmatched_confirm, :error_details)

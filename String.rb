@@ -3,6 +3,7 @@
 #===============================================================================
 "zz".next    # "aaa"
 'abc'.start_with?('a')   #true
+'abc'.end_with?('c')   #true
 'abc'.include?('b')      #
 
 #special characters:

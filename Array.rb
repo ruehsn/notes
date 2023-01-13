@@ -1,7 +1,4 @@
-#===============================================================================
-#ARRAY
-#===============================================================================
-#iterating thr"ough an array
+#iterating through an array
 array.each_with_index {|value, index| 
   puts "#{value} => #{index}" }
   
@@ -24,6 +21,10 @@ array.each_with_index {|value, index|
     end
   result.append(record)
 end 
+
+#select / filter
+[1,2,3,4,5].select {|num| num.even? }     #=> [2, 4]
+
 
 #uniq
 objects = [1, 2, "a", "b", :c, :d]
