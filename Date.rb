@@ -35,12 +35,18 @@ Date (Year, Month, Day):
   %p - Meridian indicator, uppercase (``AM'' or ``PM'')
   %M - Minute of the hour (00..59)
   %S - Second of the minute (00..60)
-  
+
   %c - date and time (%a %b %e %T %Y)
   %D - Date (%m/%d/%y)
   %F - The ISO 8601 date format (%Y-%m-%d)
-  
+
 
   #bigDecimal - can not have and characters besides . and numbers!!!
   puts BigDecimal.new('36,987.95').to_s('F') #36.0
 puts BigDecimal.new('987.95').to_s('F')    #987.95
+
+#120705.T1312"
+
+DateTime.parse()
+
+DateTime.strptime('2001-02-03T04:05:06+07:00', '%Y-%m-%dT%H:%M:%S%z')
