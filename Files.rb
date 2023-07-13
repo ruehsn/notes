@@ -2,7 +2,7 @@
 # File /Driectory  stuff:
 #==============================================================================
 
-# make a directory: 
+# make a directory:
 require 'fileutils'
 FileUtils.mkpath(dirname)
 
@@ -14,6 +14,7 @@ FileUtils.remove_dir(@local_dir) if Dir.exist?(@local_dir) #
 
 #looping through a directory:
 #-------------------------------------------
+Dir.each_child(path){|i| puts i} #skips the . and ..
 Dir.foreach(path){|item|
   next if item == '.' or item == '..'
 	parse_file( path +"\\"+item)
@@ -23,15 +24,15 @@ Dir.foreach(path){|item|
   next if item == '.' or item == '..'
   parse_file( path +"\\"+item)
   }
-  
+
   #specifying an extension:
   Dir.glob('C:/#Ruby/Run/Gems/*.gem'){|item|
     puts item
-  }  
-  
+  }
+
   #- reccursively
   require "pathname"
-  
+
   def rec_path(path, file= false)
     puts path
     path.children.collect do |child|
@@ -42,14 +43,12 @@ Dir.foreach(path){|item|
       end
     end.select { |x| x }.flatten(1)
   end
-  
-  
-  
+
 #IO
 #-------------------------------------------
 
 #writing:
-  File.open("output.txt", "a") # append
+File.open("output.txt", "a") # append
 
 File.open("output.txt", "w") do |file|
   file.puts "1 + 2 = #{1+2}"
@@ -62,6 +61,7 @@ File.open(local_filename, 'w') {|f| f.write(string) }
 File.open("testfile") do |file|
   file.each_line {|line| puts "Got #{line.dump}" }
 end
+
 # these 2 methods are the same:
 File.foreach("access_log") do |request|
   puts request
@@ -78,7 +78,7 @@ File.readlines("filename")
 
 #Reads just the first line:
 puts File.open('somefile.txt', &:readline)
-	
+
 #read file into string:
 contents = File.open('path-to-file.tar.gz', 'rb') { |f| f.read }
 contents = IO.read(@document.path)
@@ -90,8 +90,8 @@ file.close
 file.unlink    # deletes the temp file
 
 
-#File System 
-#----------------------  
+#File System
+#----------------------
 File.rename(old_file, new_file)
 
 file = "/path/to/xyz.mp4"

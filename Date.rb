@@ -8,7 +8,7 @@ elapsed # => 9.183449000120163 seconds
 
 # Date format:
 #===============================================================================
-Date.today.strftime()
+Date.today.strftime("%F")
 Date.today + 30  # 30 days from today
 
 Date (Year, Month, Day):
@@ -46,6 +46,9 @@ Date (Year, Month, Day):
 puts BigDecimal.new('987.95').to_s('F')    #987.95
 
 #120705.T1312"
+
+'%m/%d/%y %H:%M' #"05/03/23 00:45
+"%y%m%d"         # 230503
 
 DateTime.parse()
 

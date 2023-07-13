@@ -1,11 +1,12 @@
 #===============================================================================
 #String
 #===============================================================================
-"zz".next    # "aaa"
-'abc'.start_with?('a')   #true
-'abc'.end_with?('c')   #true
-'abc'.include?('b')      #
+"zz".next                   # "aaa"
+'abc'.start_with?('a')      #true
+'abc'.end_with?('c')        #true
+'abc'.include?('b')         #
 
+'S000 U4001'.gsub('S000 ', '') #U4001
 #special characters:
 26.chr  #sub char
 .ord  #get the char number
@@ -29,7 +30,7 @@ GROCERY_LIST
 require 'strscan'
 s = StringScanner.new("//SPOOL2   DD  DSN=PEN.R&DB..OPER.R5400.RPT(+1),")
 
-# Symbols 
+# Symbols
 #===============================================================================
 :flag_a
 "some_String".to_sym #:some_string
