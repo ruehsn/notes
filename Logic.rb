@@ -14,10 +14,10 @@ when "A", "B"
     puts "response was a success"
   when file_name.include?('Tracker')
     return "Tracker/"
-  else 
+  else
     #all other cases
   end
-  
+
 #when examining the class of the variable:
 case file
   when File, Tempfile
@@ -28,10 +28,31 @@ case file
     raise "Unknown type: #{file.class}"
 end
 
+#compact Case statement
+case balance
+  when (   0...1000) then 0.5
+  when (1000...5000) then 1.621
+  when (5000...)     then 2.475
+end
+
+# setting own conditions
+case
+  when speed > 60
+    put "too fast!"
+  #...
+end
+
+#setting value in case statement
+author = case title
+         when "War and Peace" then 'Tolsoy'
+         when "Romeo and Juliet" then 'Shakespeare'
+         else "Don't Know"
+         end
+
 #XOR operator
-true  ^ false  => true                  
+true  ^ false  => true
 false ^ true   => true
-true  ^ true   => false                 
+true  ^ true   => false
 false ^ false  => false
 
 #Ternary Operation

@@ -1,19 +1,20 @@
 #loops:
-while condition
+while some_flag_is_true
 	some_method
+end
+
+until some_flag_is_false do
+  code
 end
 
 begin
   code
 end while some_flag_is_true
 
-until some_flag_is_false do
-  code
-end
 
 
-5.times do 
-  send_sms_to('xxx') 
+5.times do
+  send_sms_to('xxx')
 end
 
 for i in 0..5

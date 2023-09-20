@@ -30,7 +30,7 @@ Dir.foreach(path){|item|
     puts item
   }
 
-  #- reccursively
+  # recursively
   require "pathname"
 
   def rec_path(path, file= false)
