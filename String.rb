@@ -27,6 +27,9 @@ Quake
 Diablo
 
 
+#clean text from invalid chars:
+text.encode("US-ASCII", invalid: :replace, undef: :replace, replace: "")
+
 #replacing String
 'yes yes'.sub('yes', 'no')  #no yes -does only first one
 'yes yes'.gsub('yes', 'no') #no no  -does as many as possible
@@ -193,7 +196,7 @@ to_sym, intern: Returns the symbol corresponding to self.
 
 Methods for Iterating
 each_byte:      Calls the given block with each successive byte in self.
-each_char:      Calls the given block with each successive character in self.
+ :      Calls the given block with each successive character in self.
 each_codepoint: Calls the given block with each successive integer codepoint in self.
 each_grapheme_cluster: Calls the given block with each successive grapheme cluster in self.
 each_line:      Calls the given block with each successive line in self, as determined by a given record separator.

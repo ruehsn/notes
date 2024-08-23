@@ -1,4 +1,15 @@
 require 'minitest/autorun'
+class TestMoveItParse < Minitest::Test
+
+	def test_member_name()
+		assert( member_name_correct?('AC~OG!U2', 'AC#OG#U2'))
+	end
+
+	def test_get_gen_name()
+		assert_equal(get_gen_name('./ ADD NAME=AC~IN!3             '), 'AC~IN!3')
+	end
+end
+
 
 assert
 refute

@@ -18,6 +18,16 @@ when "A", "B"
     #all other cases
   end
 
+#case return statment
+	def load_lib_conv(dsn)
+		return case dsn
+			when /\w+\.\w+\.LOAD/     then dsn[0,2].to_sym
+			when /SYS1\.S\w+/         then :SY
+			when 'OPN.OPER.DUMMYLOD'  then nil
+			else dsn
+		end
+	end
+
 #when examining the class of the variable:
 case file
   when File, Tempfile

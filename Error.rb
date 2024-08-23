@@ -1,6 +1,6 @@
 # ERROR handling
 #===============================================================================
-#specific Block of code test 
+#specific Block of code test
 begin
   # ...
 rescue IOError, SystemCallError, Net::FTPError
@@ -8,13 +8,13 @@ rescue IOError, SystemCallError, Net::FTPError
 rescue => e
     # ... same as: same as: rescue StandardError => e; recover highest level of errors your want to generalize.
    puts e  # just the error message
-   puts e.backtrace 
+   puts e.backtrace
   else
     # run if no exceptions
   ensure
     #  always run (exceptions or no exceptions)
   end
-  
+
 #error handle on whole method:
 def my_method
     ...
@@ -35,13 +35,13 @@ rescue => e
 end
 
 
-raise "error message"  #raises a RuntimeError
+raise "error message"  #raises a RuntimfeError
 
 #creating a custom error message
 #===============================================================================
 class PepError < StandardError
   attr_reader :pep_error_code
-  
+
   def initialize(pep_error_code, msg)
     puts "error!!! #{pep_error_code}"
     @pep_error_code=pep_error_code
@@ -55,7 +55,7 @@ raise ArgumentError.new(
 ) if CREATURES.size < n
 
 #raising that custom error:
-raise PepError.new(pep_rc, error)  
+raise PepError.new(pep_rc, error)
 
 Exception
  NoMemoryError

@@ -48,6 +48,11 @@ numbers.all?{|n| n<10}  #true
 #duplicates in an Array:
 [1,2,2,3,4,7,4,4].group_by(&:itself).filter_map { |_,v| v if v.size > 1 } # [[2,2],[4,4,4]]
 
+#Array to Hash
+#=================================
+# Define an array with elements representing key-value pairs
+array = [:a, 1, :b, 2, :c, 3]
+hash = Hash[*array]  # Output: {:a=>1, :b=>2, :c=>3}
 
 #Associative Arrays:
 #=======================================
@@ -148,7 +153,7 @@ a.assoc("foo")      #=> nil
 # join:             Returns a newsString containing the elements joined by the field separator.
 # to_a:             Returns self or a new array containing all elements.
 # to_ary:           Returns self.
-# to_h:             Returns a new hash formed from the elements.
+# to_h:             Returns a new hash formed from the elements; see line 51 for 1 dim
 # transpose:        Transposes self, which must be an array of arrays.
 
 # Other Methods

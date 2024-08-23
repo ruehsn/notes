@@ -14,11 +14,10 @@ FileUtils.remove_dir(@local_dir) if Dir.exist?(@local_dir) #
 
 #looping through a directory:
 #-------------------------------------------
-Dir.each_child(path){|i| puts i} #skips the . and ..
-Dir.foreach(path){|item|
-  next if item == '.' or item == '..'
-	parse_file( path +"\\"+item)
-}
+#skips the . and ..
+Dir.each_child('/path/to/dir') do |filename|
+  puts filename
+end
 
 Dir.foreach(path){|item|
   next if item == '.' or item == '..'

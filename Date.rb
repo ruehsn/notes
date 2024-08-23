@@ -15,7 +15,7 @@ Date.today + 30  # 30 days from today
 %Y - Year with century (can be negative, 4 digits at least) 0000, 1995, 2009, 14292, etc.
   %C - year / 100 (round down.  20 in 2009)
   %y - year % 100 (00..99)
-%m - Month of the year, zero-padded (01..12)    %_m  blank-padded ( 1..12)          %-m  no-padded (1..12)
+%m - Month of the year,  -padded (01..12)    %_m  blank-padded ( 1..12)          %-m  no-padded (1..12)
 %B - The full month name (``January'')       %^B  uppercased (``JANUARY'')
   %b - The abbreviated month name (``Jan'')    %^b  uppercased (``JAN'')
 %d - Day of the month, zero-padded (01..31)        %-d  no-padded (1..31)
