@@ -1,5 +1,8 @@
 #Command Line Interface - aka working with CMD
 
+#pausing with feed back
+30.times{sleep(1); print '.'}
+
 ARGV[0] # array of arguments passed in aka script.rb A B => ARGV= ['A', 'B']
 
 # Standard-In- no gems:
@@ -40,5 +43,3 @@ Open3.popen3("curl http://example.com") do |stdin, stdout, stderr, thread|
    pid = thread.pid
    puts stdout.read.chomp
 end
-
-

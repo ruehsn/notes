@@ -48,13 +48,13 @@ end
 # setting own conditions
 case
   when speed > 60
-    put "too fast!"
+    puts "too fast!"
   #...
 end
 
 #setting value in case statement
 author = case title
-         when "War and Peace" then 'Tolsoy'
+         when "War and Peace"    then 'Tolsoy'
          when "Romeo and Juliet" then 'Shakespeare'
          else "Don't Know"
          end
